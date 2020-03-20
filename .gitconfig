@@ -1,0 +1,83 @@
+[user]
+	name = glk1001
+	email = gregg.kay@gmail.com
+[merge]
+	tool = bc
+[mergetool "bc"]
+  path = /usr/bin/bcompare
+[diff]
+  tool = bc
+[difftool "bc"]
+  path = /usr/bin/bcompare
+[difftool]
+  keepBackup = false
+  trustExitCode = false 
+  prompt = false
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold 
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+[am]
+  keepcr = true
+[format]
+  attach
+[branch "master"]
+  rebase = true
+[apply]
+  whitespace = nowarn
+[branch]
+  autosetuprebase = always
+[core]
+  autocrlf = false
+  longpaths = true
+#  excludesfile = H:/.gitignore_global
+[push]
+  default = simple
+[alias]
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+  df = diff
+  dt = difftool
+  mt = mergetool
+  lg = log -p
+  logme = log --author=\"Greg Kay\"
+  who = shortlog -s --
+  undo = reset --hard
+  llog = log --date=local
+  changes = diff --name-status -r
+  diff-commits = log --left-right --graph --cherry-mark --oneline 
+  diffstat = diff --stat -r
+  clnchk=clean -n -d
+  find = !git ls-tree -r --name-only HEAD | grep -i
+  aliases = !git config --get-regexp 'alias.*' | sed 's/^alias\\.//' | sed 's/[ ]/ = /' | sort ;;
+
+	stage-deleted = !sh /o/Prj/omSource/Utilities/gitScripts/stage-deleted
+	diffall = !sh /o/Prj/omSource/Utilities/gitScripts/diffall
+	merge-ours = merge -s recursive -Xours
+	grep-add = !sh /o/Prj/omSource/Utilities/gitScripts/git-grep-add
+	grep-diff = !sh /o/Prj/omSource/Utilities/gitScripts/git-grep-diff
+	format-java = !sh /o/Prj/omSource/Utilities/gitScripts/format-java
+[status]
+  submodulesummary = true
+[pager]
+  branch = false
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process

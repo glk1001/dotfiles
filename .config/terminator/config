@@ -1,0 +1,19 @@
+[global_config]
+  putty_paste_style = True
+[keybindings]
+[profiles]
+  [[default]]
+    cursor_color = "#aaaaaa"
+    copy_on_selection = True
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+      size = 1000, 620
+      position = 150:20
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+[plugins]
