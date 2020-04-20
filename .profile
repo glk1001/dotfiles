@@ -26,5 +26,3 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-alias ssh_work='ssh root@pluto.om.net'
-alias gs='git status'

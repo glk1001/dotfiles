@@ -1,18 +1,32 @@
 [user]
-	name = glk1001
-	email = gregg.kay@gmail.com
+  name = glk1001
+  email = gregg.kay@gmail.com
+[core]
+  autocrlf = false
+#  excludesfile = H:/.gitignore_global
+  longpaths = true
+  editor = vim
+[pager]
+  branch = false
 [merge]
-	tool = bc
+  tool = bc
 [mergetool "bc"]
   path = /usr/bin/bcompare
 [diff]
   tool = bc
-[difftool "bc"]
+[difftool]
   path = /usr/bin/bcompare
+  prompt = false
 [difftool]
   keepBackup = false
   trustExitCode = false 
   prompt = false
+  bc = trustExitCode
+  bc = trustExitCode
+[status]
+  submodulesummary = true
+[push]
+  default = simple
 [color]
   branch = auto
   diff = auto
@@ -37,15 +51,10 @@
 [branch "master"]
   rebase = true
 [apply]
+  ignorewhitespace = change
   whitespace = nowarn
 [branch]
   autosetuprebase = always
-[core]
-  autocrlf = false
-  longpaths = true
-#  excludesfile = H:/.gitignore_global
-[push]
-  default = simple
 [alias]
   st = status
   ci = commit
@@ -65,19 +74,9 @@
   clnchk=clean -n -d
   find = !git ls-tree -r --name-only HEAD | grep -i
   aliases = !git config --get-regexp 'alias.*' | sed 's/^alias\\.//' | sed 's/[ ]/ = /' | sort ;;
-
-	stage-deleted = !sh /o/Prj/omSource/Utilities/gitScripts/stage-deleted
-	diffall = !sh /o/Prj/omSource/Utilities/gitScripts/diffall
-	merge-ours = merge -s recursive -Xours
-	grep-add = !sh /o/Prj/omSource/Utilities/gitScripts/git-grep-add
-	grep-diff = !sh /o/Prj/omSource/Utilities/gitScripts/git-grep-diff
-	format-java = !sh /o/Prj/omSource/Utilities/gitScripts/format-java
-[status]
-  submodulesummary = true
-[pager]
-  branch = false
 [filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+
