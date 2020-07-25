@@ -26,3 +26,6 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+alias youtube='/home/greg/.local/bin/youtube-dl'
+alias qb='/usr/local/bin/qb.sh'
+

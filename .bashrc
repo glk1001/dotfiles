@@ -125,5 +125,9 @@ parse_git_branch()
 
 export PS1="\[\e[32m\]\u@\h \[\e[34m\]\W \[\e[91m\]\$(parse_git_branch)\[\e[00m\]$ "
 
+
+export PYTHONPATH="${HOME}/Prj/Python:${HOME}/Prj/Python/movie_server/movie_src:${HOME}/Prj/Python/utilities"
+export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
+
 source "${HOME}/.bash_aliases"
 
