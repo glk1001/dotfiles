@@ -61,6 +61,7 @@
   cpi = cherry-pick
   br = branch
   co = checkout
+  sw = switch
   df = diff
   dt = difftool
   mt = mergetool
@@ -81,3 +82,5 @@
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
 
+[credential]
+	helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret

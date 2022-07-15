@@ -1,6 +1,5 @@
-alias ssh_work='ssh root@pluto.om.net'
-
 alias gs='git status'
+
 alias youtube='/home/greg/.local/bin/youtube-dl'
 
 alias grep='grep --color=auto'

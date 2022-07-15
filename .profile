@@ -29,3 +29,8 @@ fi
 alias youtube='/home/greg/.local/bin/youtube-dl'
 alias qb='/usr/local/bin/qb.sh'
 
+export LIBVA_DRIVER_NAME=i965
+
+
+# Added by Toolbox App
+export PATH="$PATH:/home/greg/.local/share/JetBrains/Toolbox/scripts"
