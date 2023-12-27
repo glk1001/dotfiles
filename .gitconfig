@@ -1,11 +1,13 @@
 [user]
   name = glk1001
   email = gregg.kay@gmail.com
+[credential]
+  helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
 [core]
   autocrlf = false
-#  excludesfile = H:/.gitignore_global
   longpaths = true
   editor = vim
+  excludesfile = /home/greg/.gitignore
 [pager]
   branch = false
 [merge]
@@ -19,7 +21,7 @@
   prompt = false
 [difftool]
   keepBackup = false
-  trustExitCode = false 
+  trustExitCode = false
   prompt = false
   bc = trustExitCode
   bc = trustExitCode
@@ -37,7 +39,7 @@
   remote = green
 [color "diff"]
   meta = yellow bold
-  frag = magenta bold 
+  frag = magenta bold
   old = red bold
   new = green bold
 [color "status"]
@@ -71,7 +73,7 @@
   undo = reset --hard
   llog = log --date=local
   changes = diff --name-status -r
-  diff-commits = log --left-right --graph --cherry-mark --oneline 
+  diff-commits = log --left-right --graph --cherry-mark --oneline
   diffstat = diff --stat -r
   clnchk=clean -n -d
   find = !git ls-tree -r --name-only HEAD | grep -i
@@ -81,6 +83,5 @@
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
-
-[credential]
-	helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+[cola]
+  spellcheck = false

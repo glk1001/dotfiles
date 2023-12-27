@@ -90,9 +90,9 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+alias ll='ls -alF --color=auto'
+alias la='ls -A --color=auto'
+alias l='ls -CF --color=auto'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -129,10 +129,14 @@ export PS1="\[\e[32m\]\u@\h \[\e[34m\]\W \[\e[91m\]\$(parse_git_branch)\[\e[00m\
 export PYTHONPATH="${HOME}/Prj/Python:${HOME}/Prj/Python/movie_server/movie_src:${HOME}/Prj/Python/utilities"
 export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
 export CCACHE_DIR=/mnt/fast_data/docker-ccache
+export PATH=/usr/lib/cargo/bin/coreutils:$PATH
 
 source "${HOME}/.bash_aliases"
 
-# export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"
 alias hh="hstr --favorites"
-export HSTR_CONFIG=hicolor,raw-history-view,prompt-bottom
+#export HSTR_CONFIG=hicolor,raw-history-view,prompt-bottom
+export HSTR_CONFIG=hicolor,prompt-bottom,favorites-view,static-favorites,blacklist
+export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"
+
+. "$HOME/.cargo/env"
 

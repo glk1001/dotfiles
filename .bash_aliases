@@ -13,7 +13,7 @@ alias mount='mount |column -t'
 alias h='history'
 alias j='jobs -l'
 
-alias vi=vim
+alias vi=nvim
 
 alias rm='rm --preserve-root'
 alias chown='chown --preserve-root'
@@ -22,4 +22,8 @@ alias chgrp='chgrp --preserve-root'
 
 alias reboot='sudo /sbin/reboot'
 alias sysdown='sudo /sbin/shutdown -P now'
+
+alias ll='ls -alF'
+
+alias top=btop
 

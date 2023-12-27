@@ -34,3 +34,5 @@ export LIBVA_DRIVER_NAME=i965
 
 # Added by Toolbox App
 export PATH="$PATH:/home/greg/.local/share/JetBrains/Toolbox/scripts"
+. "$HOME/.cargo/env"
+

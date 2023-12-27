@@ -6,8 +6,9 @@
 [keybindings]
 [profiles]
   [[default]]
-    cursor_color = "#aaaaaa"
+    font = Ubuntu Mono 13
     scrollback_lines = 1000
+    use_system_font = False
     copy_on_selection = True
 [layouts]
   [[default]]
@@ -37,5 +38,6 @@
       order = 1
       profile = default
       uuid = cfc79eff-c08a-42ee-b14e-2ea0492d0139
-      directory = /home/greg/Prj/github/xbmc/visualization.goom
+      directory = /home/greg/Prj/github/xbmc/visualization.goom-pp
 [plugins]
+
